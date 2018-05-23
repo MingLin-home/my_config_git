@@ -1,0 +1,203 @@
+# -*- text -*-
+
+#C- : control command
+#M- : in commond use command and input
+#F9 : math symbol input
+#M-slash : some struct symbol command,like frac,hspace
+#F12 : some command sequences,like font , pargraph
+#C-e : enviroment related
+
+
+# Copy, paste, etc.: more familiar keys
+\bind "C-c"	"copy"
+\bind "C-s" "buffer-write"
+
+\bind "C-k"	"line-delete-forward"
+\bind "C-l"	"screen-recenter"
+
+\bind "C-o"	"file-open"
+
+\bind "C-u"	"font-underline"
+\bind "C-v"	"paste"
+\bind "C-x"	"cut"
+\bind "C-z"	"undo"
+\bind "S-C-Z"	"redo"
+\bind "C-a"	"command-sequence buffer-begin ; buffer-end-select"   # select all
+
+
+# This combination makes an umlaut accent now.
+\bind "S-M-quotedbl"           "quote-insert single"
+
+# Function keys.
+
+\bind "C-f"                     "dialog-show findreplace"
+# F4 to F8 are used to switch fonts. Sciword mnemonic.
+#\bind "F4"                     "font-default"
+#\bind "F5"                     "font-bold"
+#\bind "F6"                     "font-emph"
+#\bind "F7"                     "font-code"
+#\bind "F8"                     "font-noun"
+# M-m bound below as meta-prefix (useful e.g. if the keyboard doesn't have a working ALT).
+
+
+
+
+\bind "M-Up"			"paragraph-move-up"
+\bind "M-Down"			"paragraph-move-down"
+\bind "S-KP_Right"  			"char-right-select"
+\bind "S-KP_Left"				"char-left-select"
+\bind "S-KP_Up" 				"up-select"
+\bind "S-KP_Down"				"down-select"
+\bind "S-KP_Home"				"line-begin-select"
+\bind "S-KP_End"				"line-end-select"
+\bind "C-KP_Home" 			"buffer-begin-select"
+\bind "C-KP_End"  			"buffer-end-select"
+
+\bind "M-x" "command-execute"
+
+
+######################included files above###################################
+
+\bind_file latinkeys.bind
+#\bind_file cyrkeys.bind
+#\bind_file greekkeys.bind
+
+####################mykey binds###################################
+\bind "Escape"	"cancel"
+\bind "M-w"		"up"
+\bind "M-s"		"down"
+\bind "C-p"		"buffer-update pdf"
+
+\bind "C-m"		"math-mode"
+\bind "C-t"		"ert-insert"
+\bind "C-d"		"math-display"
+\bind "C-n"		"math-number-toggle"
+
+\bind "F9 space"			"space-insert protected"
+\bind "F5"		"buffer-view pdf2"
+\bind "C-b"		"bookmark-save 1"
+\bind "C-g"		"bookmark-goto 1"
+\bind "C-i C-d"		"depth-increment"
+\bind "C-Return"		"newline-insert newline"
+\bind "C-S-Return"		"newline-insert linebreak"
+
+###################### my math input
+\bind "M-a" "math-mutate align"
+\bind "M-m t"		"math-insert ^\top"
+\bind "M-m d s"		"math-insert \displaystyle"
+\bind "M-Return"		"break-paragraph inverse"
+
+\bind "M-m space"	"space-insert normal"
+
+\bind "S-asciitilde"		"math-insert ~"
+\bind "M-m i"		"math-insert \int"
+\bind "M-m p"		"math-insert \prod"
+\bind "M-m d f"		"math-insert \dfrac"
+\bind "F9 slash"		"math-insert \dfrac"
+\bind "M-m f"		"math-insert \frac"
+\bind "M-m u"		"math-insert \sum"
+\bind "F9 S-plus"		"math-insert \sum"
+\bind "M-m s"		"math-insert \sqrt"
+\bind "M-m r"		"math-insert \root"
+\bind "M-m comma"	"math-insert \dot"
+\bind "M-m S-colon"	"math-insert \ddot"
+\bind "M-m equal"	"math-insert \triangleq"
+\bind "M-m h"		"math-insert \widehat"
+\bind "M-m S-caret" "math-insert \overset" 
+\bind "M-m S-underscore" "math-insert \underset"
+\bind "M-m S-bar" "math-delim Vert Vert"
+
+\bind "F8 equal"	"math-insert \equiv"
+\bind "F8 b"	"math-insert \mathbb"
+\bind "F8 r"	"math-insert \mathrm"
+\bind "F8 c" "math-insert \mathcal"
+\bind "F8 f" "math-insert \mathbf"
+\bind "F8 t" "math-insert \textrm"
+\bind "F8 o" "math-insert \boldsymbol"
+
+##################---------------------change layout------------------###########3
+\bind "C-e 0"		"layout Standard"
+\bind "C-e 1"		"layout Chapter"
+\bind "C-e 2"		"layout Section"
+\bind "C-e 3"		"layout Subsection"
+\bind "C-e 4"		"layout Subsubsection"
+\bind "C-e 5"		"layout Paragraph"
+\bind "C-e 6"		"layout Subparagraph"
+\bind "C-e d s"		"layout Description"
+\bind "C-e e n"		"layout Enumerate"
+\bind "C-e i t"		"layout Itemize"
+\bind "C-e l i"		"layout List"
+\bind "C-e q u"		"layout Quote"
+\bind "C-e q t"		"layout Quotation"
+\bind "C-e percent"		"layout Comment"
+\bind "C-e s p"		"layout --Separator--"
+
+#\bind "C-e f"		"dialog-show-new-inset graphics"  ## should be figure-float
+##############------beamer----------------------###########
+\bind "C-e b f"		"layout BeginFrame"
+\bind "C-e b l"		"layout Block"
+\bind "C-e d f"		"layout Definition"
+\bind "C-e e x"		"layout Example"
+\bind "C-e c s"		"layout Columns"
+\bind "C-e c a"		"layout Column"
+
+
+######## math symbol insert
+\bind "F9 apostrophe"	"math-insert \prime"
+\bind "F9 S-bar"		"math-delim | |"
+\bind "F9 S-braceleft"		"math-delim { }"
+\bind "F9 S-parenleft"	"math-delim ( )"
+\bind "F9 bracketleft"		"math-delim [ ]"
+\bind "M-m S-less"		"math-delim langle rangle"
+\bind "F9 1"		"math-insert \not"
+\bind "F9 2"		"math-insert \partial"
+\bind "F9 8"		"math-insert \infty"
+\bind "F9 S-asterisk"		"math-insert \times"
+\bind "F9 minus"		"math-insert \rightarrow"
+\bind "F9 equal"    "math-insert \overrightarrow"
+\bind "F9 S-less"	"math-insert \leq"
+\bind "F9 S-greater"	"math-insert \geq"
+
+
+# lowercase math Greek
+\bind "F9 a" "math-insert \alpha"
+\bind "F9 b" "math-insert \beta"
+\bind "F9 g" "math-insert \gamma"
+\bind "F9 d" "math-insert \delta"
+\bind "F9 e" "math-insert \epsilon"
+\bind "F9 C-e" "math-insert \varepsilon"
+\bind "F9 z" "math-insert \zeta"
+\bind "F9 h" "math-insert \eta"
+\bind "F9 j" "math-insert \theta"
+\bind "F9 C-q" "math-insert \vartheta"
+\bind "F9 i" "math-insert \iota"
+\bind "F9 k" "math-insert \kappa"
+\bind "F9 l" "math-insert \lambda"
+\bind "F9 m" "math-insert \mu"
+\bind "F9 n" "math-insert \nu"
+\bind "F9 x" "math-insert \xi"
+\bind "F9 p" "math-insert \pi"
+\bind "F9 v p" "math-insert \varpi"
+\bind "F9 r" "math-insert \rho"
+\bind "F9 s" "math-insert \sigma"
+\bind "F9 C-s" "math-insert \varsigma"
+\bind "F9 t" "math-insert \tau"
+\bind "F9 u" "math-insert \upsilon"
+\bind "F9 v f" "math-insert \varphi"
+\bind "F9 q" "math-insert \chi"
+\bind "F9 y" "math-insert \psi"
+\bind "F9 w" "math-insert \omega"
+\bind "F9 f" "math-insert \phi"
+
+# uppercase math Greek
+\bind "F9 S-G" "math-insert \Gamma"
+\bind "F9 S-D" "math-insert \Delta"
+\bind "F9 S-Q" "math-insert \Theta"
+\bind "F9 S-L" "math-insert \Lambda"
+\bind "F9 S-X" "math-insert \Xi"
+\bind "F9 S-P" "math-insert \Pi"
+\bind "F9 S-S" "math-insert \Sigma"
+\bind "F9 S-U" "math-insert \Upsilon"
+\bind "F9 S-F" "math-insert \Phi"
+\bind "F9 S-Y" "math-insert \Psi"
+\bind "F9 S-W" "math-insert \Omega"
